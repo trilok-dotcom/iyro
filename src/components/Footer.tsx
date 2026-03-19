@@ -6,16 +6,12 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-brand">
-            <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="footer-logo">
-              <defs>
-                <linearGradient id="gold-footer" x1="0" y1="0" x2="24" y2="40" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#D4AF37" />
-                  <stop offset="1" stopColor="#F5D67B" />
-                </linearGradient>
-              </defs>
-              <path d="M4 12 L16 4 L16 10 L4 18 Z" fill="url(#gold-footer)" />
-              <path d="M4 22 L16 14 L16 36 L4 36 Z" fill="url(#gold-footer)" />
-            </svg>
+            <img 
+              src="/iyro logo.jpeg" 
+              alt="IYRO Agency" 
+              className="footer-logo-img" 
+              style={{ height: '80px', width: 'auto', objectFit: 'contain', marginBottom: '16px', mixBlendMode: 'lighten' }} 
+            />
             <h2>IYRO</h2>
             <p>Building brands that stand out.</p>
           </div>

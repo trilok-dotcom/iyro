@@ -108,27 +108,32 @@ a {
   transition: all 0.5s ease;
 }
 
-.btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+
+  .btn-primary:hover::after {
+    left: 150%;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .btn-outline:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-gold-start);
+    color: var(--accent-gold-start);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+  }
 }
 
-.btn-primary:hover::after {
-  left: 150%;
-  transition: all 0.6s ease-in-out;
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-}
-
-.btn-outline:hover {
-  transform: scale(1.05);
-  border-color: var(--accent-gold-start);
-  color: var(--accent-gold-start);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+  section {
+    padding: 80px 16px !important;
+  }
 }
 
 /* Base utilities for animations */

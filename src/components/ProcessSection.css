@@ -126,6 +126,7 @@
 }
 
 @media (max-width: 768px) {
+  .process-section { padding: 80px 0; }
   .timeline-line {
     left: 30px;
   }

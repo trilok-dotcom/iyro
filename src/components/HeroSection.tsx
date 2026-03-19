@@ -101,12 +101,6 @@ export default function HeroSection() {
 
       </div>
 
-      <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
-        </div>
-        <span className="scroll-text">Scroll</span>
-      </div>
     </section>
   );
 }

@@ -123,7 +123,7 @@
 
 @media (max-width: 768px) {
   .portfolio-section { padding: 80px 0; }
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .portfolio-card { aspect-ratio: auto; height: 450px; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 24px; }
+  .portfolio-card { aspect-ratio: auto; height: 400px; }
   .overlay-content h4 { font-size: 1.5rem; }
 }

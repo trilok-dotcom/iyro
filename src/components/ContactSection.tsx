@@ -34,25 +34,31 @@ export default function ContactSection() {
         </div>
 
         <div className="contact-right">
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" action="https://formsubmit.co/iyro.team3@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Lead from IYRO Website!" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            {/* Sends a confirmation email to the user */}
+            <input type="hidden" name="_autoresponse" value="Thank you for reaching out to IYRO Agency! We have received your request and our team will review your details to get back to you shortly to schedule your free strategy call. Talk soon!" />
+
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
             </div>
             
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
             </div>
 
             <div className="form-group">
               <label htmlFor="business">Business</label>
-              <input type="text" id="business" placeholder="Your Brand Name" required />
+              <input type="text" id="business" name="business" placeholder="Your Brand Name" required />
             </div>
 
             <div className="form-group">
               <label htmlFor="budget">Budget (Optional)</label>
-              <select id="budget">
+              <select id="budget" name="budget">
                 <option value="">Select a range</option>
                 <option value="15k">₹15,000 - ₹35,000</option>
                 <option value="35k">₹35,000 - ₹70,000</option>
@@ -62,7 +68,7 @@ export default function ContactSection() {
 
             <div className="form-group full-width">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows={4} placeholder="Tell us about your goals..." required></textarea>
+              <textarea id="message" name="message" rows={4} placeholder="Tell us about your goals..." required></textarea>
             </div>
 
             <div className="form-group full-width">

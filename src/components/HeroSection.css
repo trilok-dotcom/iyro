@@ -290,11 +290,18 @@
 
 /* Responsiveness */
 @media (max-width: 1024px) {
+  .hero-section {
+    padding: 100px 0 60px;
+    height: auto;
+    min-height: auto;
+  }
   .hero-container {
     flex-direction: column;
     text-align: center;
     padding-top: 40px;
     gap: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .hero-headline {
     font-size: 3.5rem;
@@ -305,28 +312,67 @@
   }
   .hero-left {
     text-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .abstract-visual {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin-top: 20px;
     animation: none; /* Reduce intensity */
     transform: none !important; /* Disable parallax */
   }
-  .ring-1 { width: 250px; height: 250px; }
-  .ring-2 { width: 200px; height: 200px; }
-  .ring-3 { width: 150px; height: 150px; }
-  .ring-4 { width: 100px; height: 100px; }
-  .energy-core { width: 90px; height: 90px; }
+  .ring-1 { width: 230px; height: 230px; }
+  .ring-2 { width: 180px; height: 180px; }
+  .ring-3 { width: 130px; height: 130px; }
+  .ring-4 { width: 80px; height: 80px; }
+  .energy-core { width: 70px; height: 70px; }
   @keyframes orbitParticle {
     0% { transform: rotate(0deg) translateY(-100px); opacity: 0; }
     20% { opacity: 0.8; }
     80% { opacity: 0.8; }
     100% { transform: rotate(360deg) translateY(-100px); opacity: 0; }
   }
+  .scroll-indicator {
+    display: none; /* Hide scroll indicator on smaller screens to prevent clutter */
+  }
 }
 
 @media (max-width: 768px) {
-  .hero-headline { font-size: 2.5rem; }
-  .hero-buttons { flex-direction: column; }
+  .hero-section {
+    padding: 80px 0 40px;
+  }
+  .hero-container {
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .hero-headline { 
+    font-size: 2.2rem; 
+    word-wrap: break-word;
+    margin-bottom: 20px;
+  }
+  .hero-subtext {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  .hero-buttons { 
+    flex-direction: column; 
+    width: 100%;
+    gap: 16px;
+  }
+  .abstract-visual {
+    width: 200px;
+    height: 200px;
+    margin-top: 0;
+  }
+  /* Smaller abstract visual on mobile to not overwhelm the screen */
+  .ring-1 { width: 180px; height: 180px; border-width: 1px; }
+  .ring-2 { width: 140px; height: 140px; border-width: 1px; }
+  .ring-3 { width: 100px; height: 100px; border-width: 1px; }
+  .ring-4 { width: 70px; height: 70px; }
+  .energy-core { width: 60px; height: 60px; }
+  .v-particle { display: none; } /* disable heavy particle effects on mobile */
+  .hero-particles { display: none; } /* Disable background particles on mobile */
+  .hero-ambient-glow { opacity: 0.5; }
 }

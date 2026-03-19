@@ -9,7 +9,6 @@ import PortfolioSection from './components/PortfolioSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
 import PricingSection from './components/PricingSection';
 import ProcessSection from './components/ProcessSection';
-import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import './App.css';
 
@@ -27,7 +26,6 @@ function App() {
         <WhyChooseUsSection />
         <PricingSection />
         <ProcessSection />
-        <TestimonialsSection />
         <ContactSection />
       </main>
       <Footer />

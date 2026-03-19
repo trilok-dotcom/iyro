@@ -25,17 +25,13 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <a href="#" className="logo">
-          <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="logo-icon">
-            <defs>
-              <linearGradient id="gold" x1="0" y1="0" x2="24" y2="40" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#D4AF37" />
-                <stop offset="1" stopColor="#F5D67B" />
-              </linearGradient>
-            </defs>
-            <path d="M4 12 L16 4 L16 10 L4 18 Z" fill="url(#gold)" />
-            <path d="M4 22 L16 14 L16 36 L4 36 Z" fill="url(#gold)" />
-          </svg>
+        <a href="#" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <img 
+            src="/iyro logo.jpeg" 
+            alt="IYRO Agency" 
+            className="logo-img" 
+            style={{ height: '56px', width: 'auto', objectFit: 'contain', mixBlendMode: 'lighten' }} 
+          />
           <div className="logo-text">
             <span className="logo-title">IYRO</span>
             <span className="logo-subtitle">— AGENCY —</span>
