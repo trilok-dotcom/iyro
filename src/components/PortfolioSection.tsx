@@ -7,21 +7,24 @@ const projects = [
     type: "Fashion Brand",
     desc: "Revamped social media presence with consistent branding.",
     stats: "+180% Engagement | +95% Reach",
-    img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop"
+    img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=800&auto=format&fit=crop",
+    link: "https://iyroclothes.netlify.app/"
   },
   {
     name: "FitCore Studio",
     type: "Fitness Brand",
     desc: "Created high-converting reels and strategy.",
     stats: "+120% Leads | +70% Growth",
-    img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop"
+    img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
+    link: "https://iyrogym.netlify.app/"
   },
   {
-    name: "Aura Interiors",
-    type: "Interior Design",
+    name: "Iyro Cafe",
+    type: "Cafe Branding",
     desc: "Positioned the brand as premium online.",
     stats: "3x Client Inquiries",
-    img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop"
+    img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop",
+    link: "https://iyrocafe.netlify.app/"
   }
 ];
 
@@ -54,7 +57,7 @@ export default function PortfolioSection() {
         
         <div className="portfolio-grid">
           {projects.map((p, i) => (
-            <div key={i} className="portfolio-card">
+            <a href={p.link} target="_blank" rel="noopener noreferrer" key={i} className="portfolio-card" style={{ display: 'block', textDecoration: 'none' }}>
               <div className="card-image-wrapper">
                 <img src={p.img} alt={p.name} className="portfolio-img" />
                 <div className="portfolio-overlay">
@@ -66,7 +69,7 @@ export default function PortfolioSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
