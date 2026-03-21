@@ -26,8 +26,6 @@ export default function Footer() {
             <div className="link-col">
               <h4>Social</h4>
               <a href="https://www.instagram.com/iyro.agency/" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="#">Twitter</a>
-              <a href="#">LinkedIn</a>
             </div>
           </div>
         </div>
